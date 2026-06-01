@@ -18,10 +18,10 @@ INSERT INTO specializations (name, description) VALUES
 -- 2. Insert Users
 -- Note: The password hash below corresponds to the password: 'password123'
 INSERT INTO users (email, password_hash, role, is_active, created_at) VALUES
-('admin@ayurvital.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 'admin', true, NOW()),
-('dr.smith@ayurvital.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 'doctor', true, NOW()),
-('dr.jones@ayurvital.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 'doctor', true, NOW()),
-('jane.doe@example.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 'patient', true, NOW());
+('admin@ayurvital.com', '$2b$12$XKj17Wk3UZEzWgizeH7ufemytsbvlZkJOHZXwQ8yEjNu.7wxjKoCm', 'admin', true, NOW()),
+('dr.smith@ayurvital.com', '$2b$12$XKj17Wk3UZEzWgizeH7ufemytsbvlZkJOHZXwQ8yEjNu.7wxjKoCm', 'doctor', true, NOW()),
+('dr.jones@ayurvital.com', '$2b$12$XKj17Wk3UZEzWgizeH7ufemytsbvlZkJOHZXwQ8yEjNu.7wxjKoCm', 'doctor', true, NOW()),
+('jane.doe@example.com', '$2b$12$XKj17Wk3UZEzWgizeH7ufemytsbvlZkJOHZXwQ8yEjNu.7wxjKoCm', 'patient', true, NOW());
 
 -- 3. Insert Doctor Profiles
 -- Using subqueries to get the correct user IDs dynamically
