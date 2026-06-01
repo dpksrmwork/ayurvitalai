@@ -53,9 +53,12 @@ const DashboardShell: React.FC = () => {
           <div className="page-title">
             <h2>{activeTab === 'dashboard' ? `${user.role.toUpperCase()} PORTAL` : 'PROFILE SETTINGS'}</h2>
           </div>
-          <div className="user-profile-menu">
+          <div className="user-profile-menu" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>{user.email}</span>
             <div className="avatar">{user.full_name.charAt(0)}</div>
+            <button onClick={logout} className="btn btn-secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.85rem', display: 'flex', alignItems: 'center' }}>
+              <LogOut size={14} style={{ marginRight: '0.3rem' }} /> Logout
+            </button>
           </div>
         </header>
 
