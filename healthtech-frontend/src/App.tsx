@@ -14,6 +14,10 @@ const DashboardShell: React.FC = () => {
 
   return (
     <div className="app-layout">
+      <div className="bg-glow">
+        <div className="glow-orb orb-1"></div>
+        <div className="glow-orb orb-2"></div>
+      </div>
       <aside className="sidebar">
         <div className="logo-section">
           <Activity size={24} color="#0d9488" />
@@ -333,6 +337,13 @@ const AuthGate: React.FC = () => {
 
   if (user) return <DashboardShell />;
 
+  const BackgroundGlow = () => (
+    <div className="bg-glow">
+      <div className="glow-orb orb-1"></div>
+      <div className="glow-orb orb-2"></div>
+    </div>
+  );
+
   const handleRoleSelect = (selectedRole: 'doctor' | 'patient' | 'admin') => {
     setRole(selectedRole);
     // If selecting admin, pre-fill email if wanted, or just open form
@@ -393,6 +404,7 @@ const AuthGate: React.FC = () => {
   if (view === 'landing') {
     return (
       <div className="landing-container animate-fade-in">
+        <BackgroundGlow />
         <div className="hero-badge">Connected Healthcare Workspace</div>
         <h1 className="landing-title">
           Welcome to <span>AyurVital AI Clinic</span>
@@ -446,11 +458,17 @@ const AuthGate: React.FC = () => {
   }
 
   if (view === 'guest-booking') {
-    return <GuestBookingForm onBack={() => setView('landing')} />;
+    return (
+      <>
+        <BackgroundGlow />
+        <GuestBookingForm onBack={() => setView('landing')} />
+      </>
+    );
   }
 
   return (
     <div className="auth-container">
+      <BackgroundGlow />
       <div className="glass-card auth-card animate-fade-in">
         <div className="auth-header">
           <Activity size={48} color="#0d9488" style={{ marginBottom: '1rem' }} />

@@ -117,7 +117,7 @@ export const LocalAdminDashboard: React.FC<DashboardProps> = ({ token: propToken
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {/* Stats Grid Cards */}
           <div className="grid grid-3">
-            <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+            <div className="glass-card animate-fade-in" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
               <div style={{ background: 'rgba(59,130,246,0.1)', padding: '0.75rem', borderRadius: '12px' }}>
                 <Users size={28} color="#3b82f6" />
               </div>
@@ -127,7 +127,7 @@ export const LocalAdminDashboard: React.FC<DashboardProps> = ({ token: propToken
               </div>
             </div>
 
-            <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+            <div className="glass-card animate-fade-in" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', animationDelay: '0.1s' }}>
               <div style={{ background: 'rgba(13,148,136,0.1)', padding: '0.75rem', borderRadius: '12px' }}>
                 <Briefcase size={28} color="#0d9488" />
               </div>
@@ -137,7 +137,7 @@ export const LocalAdminDashboard: React.FC<DashboardProps> = ({ token: propToken
               </div>
             </div>
 
-            <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+            <div className="glass-card animate-fade-in" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', animationDelay: '0.2s' }}>
               <div style={{ background: 'rgba(16,185,129,0.1)', padding: '0.75rem', borderRadius: '12px' }}>
                 <Calendar size={28} color="#10b981" />
               </div>
@@ -149,7 +149,7 @@ export const LocalAdminDashboard: React.FC<DashboardProps> = ({ token: propToken
           </div>
 
           {/* Appointment aggregates */}
-          <div className="glass-card">
+          <div className="glass-card animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <h3 style={{ marginBottom: '1.5rem' }}>Appointment Aggregates</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem' }}>
               <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.01)', border: '1px solid var(--border-color)', borderRadius: '8px', textAlign: 'center' }}>

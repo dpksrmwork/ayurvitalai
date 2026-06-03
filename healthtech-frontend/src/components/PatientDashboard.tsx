@@ -216,16 +216,18 @@ export const LocalPatientDashboard: React.FC<DashboardProps> = ({ token: propTok
                   <div
                     key={doc.id}
                     style={{
-                      padding: '1.25rem',
-                      background: 'rgba(255,255,255,0.01)',
+                      padding: '1.5rem',
+                      background: 'rgba(255,255,255,0.02)',
                       border: '1px solid var(--border-color)',
-                      borderRadius: '8px',
+                      borderRadius: '12px',
                       display: 'flex',
                       justifyContent: 'space-between',
                       alignItems: 'center',
                       flexWrap: 'wrap',
-                      gap: '1rem'
+                      gap: '1.5rem',
+                      transition: 'var(--transition)',
                     }}
+                    className="animate-fade-in"
                   >
                     <div>
                       <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>{doc.full_name}</h4>
@@ -266,7 +268,7 @@ export const LocalPatientDashboard: React.FC<DashboardProps> = ({ token: propTok
           </div>
 
           {selectedDoc && (
-            <div style={{ flex: '1 1 350px' }} className="glass-card">
+            <div style={{ flex: '1 1 350px' }} className="glass-card animate-fade-in">
               <h3 style={{ marginBottom: '1.5rem', color: 'var(--color-primary-hover)' }}>Schedule Booking</h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '0.25rem' }}>
                 With {selectedDoc.full_name}
