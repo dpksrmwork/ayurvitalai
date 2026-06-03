@@ -323,14 +323,16 @@ export const LocalDoctorDashboard: React.FC<DashboardProps> = ({ token: propToke
                 {appointments.map(appt => (
                   <div
                     key={appt.id}
+                    className="animate-fade-in"
                     style={{
                       display: 'flex',
                       justifyContent: 'space-between',
                       alignItems: 'center',
-                      padding: '1rem',
+                      padding: '1.25rem',
                       background: 'rgba(255,255,255,0.02)',
                       border: '1px solid var(--border-color)',
-                      borderRadius: '8px'
+                      borderRadius: '12px',
+                      transition: 'var(--transition)'
                     }}
                   >
                     <div>
@@ -366,7 +368,7 @@ export const LocalDoctorDashboard: React.FC<DashboardProps> = ({ token: propToke
           </div>
 
           {selectedAppt && (
-            <div style={{ flex: '1 1 350px' }} className="glass-card">
+            <div style={{ flex: '1 1 350px' }} className="glass-card animate-fade-in">
               <h3 style={{ marginBottom: '1.5rem', color: 'var(--color-primary-hover)' }}>Add Consultation Record</h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1rem' }}>
                 For {selectedAppt.patient?.full_name}
